@@ -1,4 +1,4 @@
-const dbConfig = require("./config/db.config")
+//const dbConfig = require("./config/db.config")
 const express = require('express');
 const app = express();
 
@@ -15,16 +15,16 @@ require('./models/index') ;
 require('./controllers/user')
 
 
-const cors = require('cors');
+/*const cors = require('cors');
 var corsOptions = {
     origin:'http://localhost:8081'
 }
-app.use(cors(corsOptions));
+app.use(cors(corsOptions));*/
 
 const  bodyParser = require('body-parser');
-const urlencoded = require('body-parser/lib/types/urlencoded');
+//const urlencoded = require('body-parser/lib/types/urlencoded');
 app.use(bodyParser.json());
-app.use(urlencoded({extends: true}));
+app.use(bodyParser.urlencoded({extends: true}));
 
 
 //routes
